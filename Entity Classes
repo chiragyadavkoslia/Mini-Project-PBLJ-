@@ -1,0 +1,20 @@
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Student")
+public class Student {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    private String name;
+    private String email;
+    private double balance;
+
+    public Student() {}
+    public Student(String name, String email, double balance) {
+        this.name = name; this.email = email; this.balance = balance;
+    }
+
+    // getters and setters
+}
